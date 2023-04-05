@@ -1,0 +1,932 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.button-container {
+  display: flex;
+  width: 870px;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+a {
+  margin: 10px;
+  padding: 20px 40px;
+  border: solid 3px black;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-1:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  transition: all ease-in-out 500ms;
+}
+
+.link-1:hover:before {
+  transform: rotate(0deg);
+}
+
+.link-2:before {
+  position: absolute;
+  content: "";
+  background-color: purple;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all ease-in-out 500ms;
+}
+
+.link-2:hover:before {
+  transform: translateX(0%);
+}
+
+.link-2 {
+  transition: all ease-in-out 500ms;
+}
+
+.link-2:hover {
+  color: white;
+}
+
+.link-3 {
+  overflow: visible;
+}
+
+.link-3:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: forestgreen;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all ease-in-out 500ms;
+}
+
+.link-3:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: forestgreen;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all ease-in-out 500ms;
+}
+
+.link-3 {
+  color: white;
+  transition: all ease-in-out 500ms;
+}
+
+.link-3:hover {
+  color: black;
+}
+
+.link-3:hover:before {
+  transform: rotateX(90deg);
+}
+
+.link-3:hover:after {
+  transform: rotateY(90deg);
+}
+
+.link-4 {
+  transition: all ease-in-out 500ms;
+}
+
+.link-4:hover {
+  font-weight: 900;
+  letter-spacing: 5px;
+  border: solid 5px black;
+}
+
+.link-5:before {
+  position: absolute;
+  content: "Link 5";
+  height: 100%;
+  width: 100%;
+  background-color: rgb(253, 50, 50);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: all ease-in-out 500ms;
+}
+
+.link-5:hover:before {
+  transform: translateY(0);
+}
+
+.link-6 {
+  background-color: rgb(85, 85, 85);
+}
+
+.link-6:before {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  transform: translateY(60%) translateX(-100%) rotate(45deg);
+  transition: all ease-in-out 500ms;
+}
+
+.link-6 {
+  transition: all ease-in-out 500ms;
+}
+
+.link-6:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.link-6:hover:before {
+  transform: translateY(60%) translateX(100%) rotate(45deg);
+}
+
+.link-7 {
+  color: transparent;
+  background-color: black;
+}
+
+.link-7:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "Link 7";
+  color: black;
+  background-color: rgb(187, 224, 248);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 500ms;
+}
+
+.link-7:after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: plum;
+  color: black;
+  content: "Link 7";
+  top: 0;
+  left: 0;
+  transform: translate(100%, -100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 500ms;
+}
+
+.link-7:hover:before {
+  transform: translate(-100%, 100%);
+}
+
+.link-7:hover:after {
+  transform: translate(0, 0);
+}
+
+.link-8:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(43, 43, 43);
+  content: "Link 8";
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(3.5);
+  color: white;
+  opacity: 0;
+  transition: all ease-in-out 500ms;
+}
+
+.link-8:hover:before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.link-9 {
+  transition: all ease-in-out 500ms;
+}
+
+.link-9:before {
+  background-color: purple;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+  transition: all ease-in-out 500ms;
+}
+
+.link-9:hover {
+  color: white;
+}
+
+.link-9:hover:before {
+  height: 185%;
+}
+
+.link-10 {
+  transition: all ease-in-out 500ms;
+}
+
+.link-10:before {
+  background-color: pink;
+  position: absolute;
+  content: "Link 10";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transition: all ease-in-out 500ms;
+  transform-origin: top;
+}
+
+.link-10:after {
+  background-color: rgb(182, 255, 140);
+  position: absolute;
+  content: "Link 10";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transition: all ease-in-out 500ms;
+  transform-origin: top;
+  transition-delay: 250ms;
+}
+
+.link-10:hover:before,
+.link-10:hover:after {
+  transform: rotateX(0deg);
+}
+
+.link-11 {
+  color: transparent;
+}
+
+.link-11:before {
+  position: absolute;
+  background-color: rgb(121, 231, 246);
+  content: "Link 11";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 500ms;
+  color: black;
+}
+
+.link-11:after {
+  position: absolute;
+  background-color: rgb(121, 231, 246);
+  content: "Link 11";
+  color: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: -100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 500ms;
+  transform: scale(0) rotateY(360deg);
+}
+
+.link-11:hover:after {
+  opacity: 1;
+  left: 0%;
+  transform: scale(1) rotateY(0deg);
+}
+
+.link-11:hover:before {
+  left: 100%;
+  transform: scale(0) rotateY(360deg);
+  opacity: 0;
+}
+
+.link-12 {
+  color: yellow;
+  background-color: rgb(27, 24, 24);
+}
+
+.link-12:before {
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  transform: translateY(-15px);
+  left: -40px;
+  box-shadow: -100px 0px 0px yellow;
+  transition: all ease-in-out 500ms;
+}
+
+.link-12:after {
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  transform: translateY(-15px);
+  right: -40px;
+  box-shadow: 100px 0px 0px yellow;
+  transition: all ease-in-out 500ms;
+}
+
+.link-12:hover:before {
+  left: 20%;
+  box-shadow: 30px 0px 0px yellow;
+}
+
+.link-12:hover:after {
+  right: 20%;
+  box-shadow: -30px 0px 0px yellow;
+}
+
+.link-12-span {
+  position: absolute;
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: ease-in-out 500ms all;
+  z-index: 100;
+  border-radius: 20px;
+  transition-delay: 250ms;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-12:hover .link-12-span {
+  transform: scale(1.5);
+}
+
+.link-13 {
+  overflow: visible;
+  color: white;
+  border: none;
+  transition: ease-in-out 500ms all;
+}
+
+.link-13:before {
+  background-color: rgb(198, 198, 255);
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: -5px;
+  left: -5px;
+  transition: ease-in-out 500ms all;
+}
+
+.link-13:hover:before {
+  top: 0;
+  left: 0;
+  transform-origin: top;
+  transform: perspective(1000px) rotateX(75deg);
+}
+
+.link-13:after {
+  background-color: rgb(255, 0, 251);
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  mix-blend-mode: multiply;
+  transition: ease-in-out 500ms all;
+}
+
+.link-13:hover:after {
+  transform: perspective(1000px) rotateX(75deg);
+  transform-origin: bottom;
+  top: 0px;
+  left: 0px;
+}
+
+.link-13:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.link-14 {
+  color: rgb(0, 140, 255);
+  transition: all ease-in-out 500ms;
+  border: rgb(0, 140, 255) solid 2px;
+}
+
+.link-14:before {
+  position: absolute;
+  content: "";
+  width: 25%;
+  height: 100%;
+  bottom: -100%;
+  left: 0%;
+  background-color: rgb(0, 140, 255);
+  transition: all ease-in-out 100ms;
+  z-index: -1;
+}
+
+.link-14:after {
+  position: absolute;
+  content: "";
+  width: 25%;
+  height: 100%;
+  top: -100%;
+  left: 25%;
+  background-color: rgb(0, 140, 255);
+  transition: all ease-in-out 100ms;
+  transition-delay: 150ms;
+  z-index: -1;
+}
+
+.link-14 span:before {
+  background-color: rgb(0, 140, 255);
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 25%;
+  left: 50%;
+  bottom: -100%;
+  transition: all ease-in-out 100ms;
+  transition-delay: 300ms;
+  z-index: -1;
+}
+
+.link-14 span:after {
+  background-color: rgb(0, 140, 255);
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 25%;
+  left: 75%;
+  top: -100%;
+  transition: all ease-in-out 100ms;
+  transition-delay: 450ms;
+  z-index: -1;
+}
+
+.link-14:hover:before,
+.link-14:hover span:before {
+  bottom: 0%;
+}
+
+.link-14:hover:after,
+.link-14:hover span:after {
+  top: 0%;
+}
+
+.link-14 span {
+  transition: all ease-in-out 500ms;
+}
+
+.link-14:hover span {
+  color: white;
+}
+
+.link-15 {
+  overflow: visible;
+  border: none;
+  color: rgb(255, 0, 234);
+  transition: all ease-in-out 750ms;
+}
+
+.link-15:hover {
+  color: rgb(38, 0, 255);
+}
+
+.link-15:before {
+  position: absolute;
+  height: 150%;
+  width: 100%;
+  content: "";
+  border-left: 3px solid rgb(255, 0, 234);
+  border-right: 3px solid rgb(255, 0, 234);
+  top: -25%;
+  left: -3px;
+}
+
+.link-15:after {
+  position: absolute;
+  height: 100%;
+  width: 125%;
+  content: "";
+  border-top: 3px solid rgb(38, 0, 255);
+  border-bottom: 3px solid rgb(38, 0, 255);
+  top: -3px;
+  left: -12.5%;
+}
+
+.link-15:before {
+  transition: all ease-in-out 300ms;
+}
+
+.link-15:after {
+  transition: all ease-in-out 300ms;
+  transition-delay: 250ms;
+}
+
+.link-15:hover:before {
+  transform: rotateY(180deg);
+}
+
+.link-15:hover:after {
+  transform: rotateX(180deg);
+}
+
+.link-16 {
+  overflow: visible;
+  background-color: orange;
+  color: black;
+  transition: ease-in-out 500ms all;
+}
+
+.link-16:hover {
+  color: white;
+}
+
+.link-16:before {
+  position: absolute;
+  height: 20%;
+  width: 10%;
+  content: "";
+  border-top: solid 3px orangered;
+  border-left: solid 3px orangered;
+  top: -8px;
+  left: -8px;
+  transition: all ease-in-out 500ms;
+}
+
+.link-16:after {
+  position: absolute;
+  height: 20%;
+  width: 10%;
+  content: "";
+  border-right: solid 3px orangered;
+  border-bottom: solid 3px orangered;
+  bottom: -8px;
+  right: -8px;
+  transition: all ease-in-out 500ms;
+}
+
+.link-16:hover:after {
+  height: 103%;
+  width: 103%;
+}
+
+.link-16:hover:before {
+  height: 103%;
+  width: 103%;
+}
+
+.link-17 {
+  overflow: visible;
+  transition: all ease-in-out 500ms;
+}
+
+.link-17:hover {
+  color: white;
+}
+
+.link-17 span {
+  position: absolute;
+  transition: all ease-in-out 200ms;
+  transform: translateX(-12px);
+}
+
+.link-17:hover span {
+  font-size: 60px;
+  transform: translate(-50%, -40%) rotate(360deg);
+}
+
+.link-17:before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: all ease-in-out 500ms;
+  z-index: -1;
+}
+
+.link-17:hover:before {
+  background-color: black;
+  transform: rotate(15deg);
+}
+
+.link-18 {
+  background-color: rgb(43, 43, 43);
+  transition: all ease-in-out 500ms;
+  color: white;
+}
+
+.link-18:before {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  content: "";
+  top: 0px;
+  left: 100%;
+  background-color: gold;
+  z-index: 100;
+  transition: all ease-in-out 500ms;
+}
+
+.link-18:after {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  content: "";
+  bottom: 0px;
+  left: -100%;
+  background-color: gold;
+  z-index: 100;
+  transition: all ease-in-out 500ms;
+}
+
+.link-18:hover:after,
+.link-18:hover:before {
+  left: 0%;
+}
+
+.link-18:hover {
+  color: gold;
+}
+
+.link-18 span:before {
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background-color: gold;
+  content: "";
+  top: 100%;
+  left: 0;
+  transition: all ease-in-out 500ms;
+}
+
+.link-18 span:after {
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background-color: gold;
+  content: "";
+  top: -100%;
+  right: 0;
+  transition: all ease-in-out 500ms;
+}
+
+.link-18:hover span:before,
+.link-18:hover span:after {
+  top: 0%;
+}
+
+.link-19 {
+  border: solid 3px rgb(0, 140, 255);
+
+  color: rgb(0, 140, 255);
+}
+
+.link-19:hover:before {
+  top: 70%;
+}
+
+.link-19:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: red;
+  top: 100%;
+  left: 0;
+  background: url("./wave.png");
+  animation: wavy 0.5s linear infinite;
+  z-index: -1;
+  transition: ease-in-out 500ms all;
+}
+
+.link-20 {
+  /* overflow: visible; */
+  transition: ease-in-out 500ms all;
+}
+
+.link-20:hover {
+  color: white;
+}
+
+.link-20 span:before {
+  position: absolute;
+  height: 20%;
+  width: 110%;
+  background-color: white;
+  content: "";
+  top: 40%;
+  left: 0;
+  transform: rotate(45deg);
+  transition: ease-in-out 500ms all;
+  z-index: -1;
+}
+
+.link-20:hover span:before {
+  height: 300%;
+  width: 200%;
+  left: -40%;
+  transform: rotate(0deg);
+  top: -40%;
+  background-color: orangered;
+}
+
+.link-21 {
+  overflow: visible;
+  color: white;
+  border: none;
+}
+
+.link-21:before {
+  content: "";
+  position: absolute;
+  background-color: teal;
+  height: 100%;
+  width: 50%;
+  top: -5%;
+  left: 0;
+  z-index: -1;
+  transform: skew(30deg);
+  transition: all ease-in-out 100ms;
+}
+
+.link-21:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(250, 87, 69);
+  height: 100%;
+  width: 51%;
+  top: 5%;
+  left: 52%;
+  z-index: -1;
+  transform: skew(30deg);
+  transition: all ease-in-out 100ms;
+}
+
+.link-21:hover:before {
+  transform: skew(0deg);
+  top: 0%;
+}
+
+.link-21:hover:after {
+  transform: skew(0deg);
+  top: 0%;
+  left: 49%;
+}
+
+.link-22 {
+  margin-left: 20px;
+  border: none;
+  color: white;
+  overflow: visible;
+  background-color: rgb(255, 0, 234);
+  border-radius: 30px;
+  transition: ease-in-out 300ms all;
+}
+
+.link-22:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.link-22:active {
+  transform: translateY(5px);
+}
+
+.link-22:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 0, 234);
+  border-radius: 30px;
+  z-index: -1;
+  transition: ease-in-out 300ms all;
+}
+
+.link-22:hover:before {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.link-23 {
+  border: solid 3px darkblue;
+  color: darkblue;
+  overflow: visible;
+}
+
+.link-23:before {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: -1;
+  transition: ease-in-out 500ms all;
+}
+
+.link-23:hover:before {
+  background-color: darkblue;
+}
+
+.link-23:after {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  position: absolute;
+  content: "";
+  transform: rotate(45deg) scale(0);
+  text-align: center;
+  left: 43%;
+  z-index: -1;
+  transition: ease-in-out 500ms all;
+}
+
+.link-23:hover:after {
+  transform: rotate(45deg) scale(8);
+}
+
+@keyframes wavy {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 120px;
+  }
+}
